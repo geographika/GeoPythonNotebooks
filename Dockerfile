@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y software-properties-common
 RUN add-apt-repository ppa:ubuntugis/ubuntugis-experimental && \
     apt-get install -y --fix-missing --no-install-recommends \
     unzip wget \
-    python python-pip mapserver-bin python-mapscript
+    python python-pip mapserver-bin python-mapscript \
     python-mappyfile
 
 # install the notebook package
