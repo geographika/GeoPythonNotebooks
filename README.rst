@@ -54,8 +54,9 @@ To set up the paths to MapServer and run the notebook:
 Jupyter and Binder
 ------------------
 
-+ https://github.com/geographika/GeoPythonNotebooks
-+ https://hub.mybinder.org - path to notebook - notebooks/mapscript-quickstart.ipynb
++ https://mybinder.org/ 
+  + Repo - https://github.com/geographika/GeoPythonNotebooks
+  + Path to notebook - notebooks/mapscript-quickstart.ipynb
 
 Running on OSGeoLive
 --------------------

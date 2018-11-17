@@ -1,6 +1,7 @@
 FROM ubuntu:18.04
 
-RUN apt-get update && apt-get install -y --fix-missing --no-install-recommends unzip wget \
+RUN add-apt-repository ppa:ubuntugis/ubuntugis-experimental && apt-get update && \
+    apt-get install -y --fix-missing --no-install-recommends unzip wget \
     python python-pip mapserver-bin python-mapscript
 
 # install the notebook package
