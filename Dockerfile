@@ -38,9 +38,9 @@ WORKDIR ${HOME}
 #    ${NB_USER}
 
 # add the notebooks
-RUN wget https://github.com/geographika/OSGeoLive12-Notebooks/archive/master.zip && \
+RUN wget https://github.com/geographika/GeoPythonNotebooks/archive/master.zip && \
     unzip master.zip && \
-    mv OSGeoLive12-Notebooks-master OSGeoLive12-Notebooks && \
+    mv GeoPythonNotebooks-master GeoPythonNotebooks && \
     rm master.zip
 
 # add the MapServer demo
@@ -52,4 +52,4 @@ RUN wget https://github.com/mapserver/mapserver-demo/archive/master.zip && \
 # set a path to the MapServer demo
 ENV MAPSERVER_DEMO /home/${NB_USER}/mapserver-demo
 
-WORKDIR ${HOME}/OSGeoLive12-Notebooks
+WORKDIR ${HOME}/GeoPythonNotebooks
