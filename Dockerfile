@@ -1,12 +1,14 @@
 FROM ubuntu:18.04
 
-RUN apt-get update && apt-get install -y --fix-missing --no-install-recommends \
-    software-properties-common unzip wget \
-    python python-pip mapserver-bin python-mapscript
+# allow easy adding of ppa:ubuntugis/ubuntugis-experimental
+RUN apt-get update && apt-get install -y software-properties-common
 
+# now install other requirements
 RUN add-apt-repository ppa:ubuntugis/ubuntugis-experimental && \
     apt-get install -y --fix-missing --no-install-recommends \
-    python-mapscript
+    unzip wget \
+    python python-pip mapserver-bin python-mapscript
+    python-mappyfile
 
 # install the notebook package
 # and see https://github.com/pypa/pip/issues/5599
