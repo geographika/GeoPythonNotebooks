@@ -8,8 +8,6 @@ RUN add-apt-repository ppa:ubuntugis/ubuntugis-experimental && \
     apt-get install -y --fix-missing --no-install-recommends \
     python-mapscript
 
-apt-get install software-properties-common
-
 # install the notebook package
 # and see https://github.com/pypa/pip/issues/5599
 RUN python -m pip install --no-cache --upgrade pip && \
