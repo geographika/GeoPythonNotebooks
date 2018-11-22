@@ -4,14 +4,14 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>0a90e3d7-1814-454d-b491-b4b60402f88b</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>GeoPythonNotebooks.py</StartupFile>
+    <StartupFile>scripts\check_repo.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>GeoPythonNotebooks</Name>
     <RootNamespace>GeoPythonNotebooks</RootNamespace>
-    <InterpreterId>MSBuild|mapscript-jupyter|$(MSBuildProjectFullPath)</InterpreterId>
+    <InterpreterId>MSBuild|mapscript-jupyter3|$(MSBuildProjectFullPath)</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -24,17 +24,32 @@
   <ItemGroup>
     <Compile Include="GeoPythonNotebooks.py" />
     <Compile Include="notebooks\mapscript-quickstart.py" />
+    <Compile Include="scripts\check_repo.py" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Dockerfile" />
     <Content Include="notebooks\mapscript-quickstart.ipynb" />
     <Content Include="notes.txt" />
+    <Content Include="osgeolive\mapscript-quickstart.ipynb" />
     <Content Include="README.rst" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="C:\Code\GeoPythonNotebooks\osgeolive\" />
+    <Folder Include="C:\Code\GeoPythonNotebooks\scripts\" />
     <Folder Include="notebooks\" />
+    <Folder Include="osgeolive\" />
+    <Folder Include="scripts\" />
   </ItemGroup>
   <ItemGroup>
+    <Interpreter Include="..\..\VirtualEnvs\mapscript-jupyter3\">
+      <Id>mapscript-jupyter3</Id>
+      <Version>3.6</Version>
+      <Description>mapscript-jupyter3 (Python 3.6 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
     <Interpreter Include="C:\VirtualEnvs\mapscript-jupyter\">
       <Id>mapscript-jupyter</Id>
       <Version>2.7</Version>
