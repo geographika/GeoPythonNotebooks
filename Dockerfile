@@ -4,7 +4,7 @@ FROM ubuntu:18.04
 RUN apt-get update && apt-get install -y software-properties-common
 
 # now install other requirements
-RUN add-apt-repository ppa:ubuntugis/ubuntugis-experimental && \
+RUN add-apt-repository ppa:ubuntugis/ubuntugis-stable && \
     apt-get install -y --fix-missing --no-install-recommends \
     unzip wget \
     python python-pip mapserver-bin python-mapscript \
